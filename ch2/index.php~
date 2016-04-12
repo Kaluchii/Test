@@ -1,0 +1,11 @@
+<?php
+        $mysqli = new mysqli("localhost", "root", "zxcv", "db_semasite");
+        $mysqli->query("SET NAMES 'utf8'");
+if (mysqli_connect_errno()) {
+    echo "Подключение невозможно: ".mysqli_connect_error();
+  }
+        $success = $mysqli->query("INSERT INTO 'users'('name', 'email', 'password') VALUES ('fafCris', 'me@mail', '123')");
+        echo $success;
+        $musqli->close ();
+        echo "Хоть что то работает?!";
+    ?>
